@@ -1,0 +1,56 @@
+﻿@model Cinema.Dominio.SESSAO
+
+@{
+    ViewBag.Title = "Excluir";
+}
+
+<h2>Excluir</h2>
+
+<h3>Confirma a exclusão da sessão selecionada?</h3>
+<div>
+    <h4>SESSAO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Id_Filme)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id_Filme)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Id_Sala)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id_Sala)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Data_Sessao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Data_Sessao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Horario_Sessao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Horario_Sessao)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Excluir" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar", "Index")
+        </div>
+    }
+</div>

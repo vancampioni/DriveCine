@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Cinema.Dominio.SESSAO>
+
+@{
+    ViewBag.Title = "Sessões Disponíveis";
+}
+
+<h2>Sessões Disponíveis</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FILME.Nome_Filme)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SALA.Nome_Sala)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Data_Sessao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Horario_Sessao)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FILME.Nome_Filme)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SALA.Nome_Sala)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Data_Sessao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Horario_Sessao)
+        </td>
+        <td>
+            @Html.ActionLink(
+                "Escolher Assento",
+                "Index",
+                "Assento",
+                new {
+                    Id_Sessao = item.Id_Sessao
+                },
+                new { 
+                    @button= "color: #000"
+                }) 
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Cinema.Dominio.ASSENTOSALA>
+
+@{
+    ViewBag.Title = "Assentos Disponíveis";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Assentos Disponíveis</title>
+</head>
+<body>
+
+
+    @foreach (var item in Model)
+    {
+        <button>
+            @Html.DisplayFor(modelItem => item.ASSENTO.Numero_Assento)
+        </button>
+    }
+</body>
+</html>

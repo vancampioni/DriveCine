@@ -1,0 +1,50 @@
+﻿@model Cinema.Dominio.CLIENTE
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4></h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome_Cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome_Cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CPF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CPF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Data_Nasc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Data_Nasc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Editar", new { Id_Cliente = Model.Id_Cliente }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

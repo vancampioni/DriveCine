@@ -1,0 +1,82 @@
+﻿@model Cinema.Dominio.INGRESSO
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Ingresso</title>
+</head>
+<body>
+    <div>
+        <h4>INGRESSO</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.ASSENTO.Numero_Assento)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ASSENTO.Numero_Assento)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.CLIENTE.Nome_Cliente)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.CLIENTE.Nome_Cliente)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.FILME.Nome_Filme)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.FILME.Nome_Filme)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.SALA.Nome_Sala)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.SALA.Nome_Sala)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.SESSAO.Id_Sessao)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.SESSAO.Id_Sessao)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.TIPO_INGRESSO.Descricao)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.TIPO_INGRESSO.Descricao)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Data_Venda)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Data_Venda)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id_Ingresso }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

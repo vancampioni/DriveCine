@@ -1,0 +1,80 @@
+﻿@model Cinema.Dominio.INGRESSO
+
+@{
+    ViewBag.Title = "Excluir";
+}
+
+<h2>Excluir</h2>
+
+<h3>Confirma a exclusão do ingresso selecionado?</h3>
+<div>
+    <h4>INGRESSO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Id_Cliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id_Cliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Id_TipoIngresso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id_TipoIngresso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Id_Filme)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id_Filme)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Id_Sessao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id_Sessao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Id_Sala)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id_Sala)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Id_Assento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id_Assento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Data_Venda)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Data_Venda)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Excluir" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar", "Index")
+        </div>
+    }
+</div>

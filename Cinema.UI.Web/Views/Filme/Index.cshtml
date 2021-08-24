@@ -1,0 +1,64 @@
+﻿@model IEnumerable<Cinema.Dominio.FILME>
+
+@{
+    ViewBag.Title = "Filmes";
+}
+@Styles.Render("~/Content/Index.css")
+
+<h2>FILMES EM EXIBIÇÃO</h2>
+
+
+<table class="table">
+    <tr>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Nome_Filme)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sinopse)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CLASSIFICACAO.Descricao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Duracao)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.Nome_Filme)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Sinopse)
+    </td>
+    <td class="table-filme">
+        @Html.DisplayFor(modelItem => item.CLASSIFICACAO.Descricao)
+    </td>
+    <td class="table-filme">
+        @Html.DisplayFor(modelItem => item.Duracao)
+    </td>
+    <td>
+        <img class="img-capa" src="@item.Imagem" alt="Filme"/>
+    </td>
+    <td>
+        @Html.ActionLink(
+               "Sessões Disponíveis",
+               "SessoesDisponiveis",
+               "Sessao",
+               new
+                    {
+                   Id_Filme = item.Id_Filme
+               },
+               new
+                    {
+                   @button = "color: #000"
+               })
+    </td>
+</tr>
+}
+
+</table>

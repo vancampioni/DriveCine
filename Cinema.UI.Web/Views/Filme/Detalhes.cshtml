@@ -1,0 +1,50 @@
+﻿@model Cinema.Dominio.FILME
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>FILME</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Id_Class)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id_Class)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome_Filme)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome_Filme)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sinopse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sinopse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Duracao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Duracao)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Editar", new { id = Model.Id_Filme }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

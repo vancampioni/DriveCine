@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Cinema.Dominio.GENERO>
+
+@{
+    ViewBag.Title = "Lista de Gêneros";
+}
+
+<h2>Gêneros Cadastrados</h2>
+
+<p>
+    @Html.ActionLink("Novo", "Cadastrar")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Descricao_Genero)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descricao_Genero)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Editar", new { Id_Genero=item.Id_Genero }) |
+            @Html.ActionLink("Detalhes", "Detalhes", new { Id_Genero = item.Id_Genero }) |
+            @Html.ActionLink("Excluir", "Excluir", new { Id_Genero = item.Id_Genero })
+        </td>
+    </tr>
+}
+
+</table>

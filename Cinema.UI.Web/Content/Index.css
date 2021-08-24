@@ -1,0 +1,29 @@
+﻿body {
+}
+
+.img-capa {
+    padding: 4px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    max-width: 25%;
+    height: auto;
+}
+
+.table-filme {
+    text-align:center;
+}
+
+.button-assentos {
+    text-align: center;
+    color: #00ff21;
+    padding: 2px;
+    margin: auto;
+    height: 10px;
+    width: auto;
+}
